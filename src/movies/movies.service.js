@@ -33,7 +33,7 @@ function readTheater(id) {
     .where({ "m.movie_id": id });
 }
 
-function readRev(id) {
+function readReviews(id) {
   return knex("reviews as r")
     .join("movies as m", "r.movie_id", "m.movie_id")
     .join("critics as c", "c.critic_id", "r.critic_id")
@@ -46,5 +46,5 @@ module.exports = {
   list,
   readData,
   readTheater,
-  readRev,
+  readReviews,
 };

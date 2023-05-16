@@ -27,7 +27,7 @@ async function update(req, res, next) {
     review_id: reviewId,
   };
   let updated = await reviews.update(review);
-  let data = await reviews.readRev(reviewId);
+  let data = await reviews.readReviews(reviewId);
   res.json({ data });
 }
 

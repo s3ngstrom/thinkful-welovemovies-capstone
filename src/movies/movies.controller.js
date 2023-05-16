@@ -8,7 +8,7 @@ async function readTheaters(req, res, next) {
 
 async function readReviews(req, res, next) {
   const { movieId } = req.params;
-  let data = await movies.readRev(movieId);
+  let data = await movies.readReviews(movieId);
   res.json({ data });
 }
 
